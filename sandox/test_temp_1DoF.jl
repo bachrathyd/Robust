@@ -1,10 +1,5 @@
 using ForwardDiff
 
-f(x::Vector) = exp(x[3]/10)+100*x[2]^2;
-g = x -> ForwardDiff.gradient(f, x); # g = ∇f
-
-X=[10,10,10]
-g(X)
 
 H(x::Vector)=cos(x[1])-0.3*x[1]
 g = x -> ForwardDiff.gradient(H, x); # g = ∇f
